@@ -21,3 +21,5 @@ Route::get('home',function ()
 {
     return view('home.index');
 });
+
+Route::get('hello/{name?}',[\App\Http\Controllers\HelloController::class, 'index'])->name('hello.index');
